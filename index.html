@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prodesk IT — Enterprise Technology &amp; Digital Marketing Solutions</title>
+  <meta name="description" content="Prodesk IT delivers enterprise-grade cloud infrastructure, cybersecurity, DevOps automation, and digital marketing solutions for modern businesses.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- skip nav -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ====== HEADER / NAVBAR ====== -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo">
+        <svg class="navbar__logo-icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="var(--color-primary, #2563eb)"/>
+          <path d="M9 24V8h7a5.5 5.5 0 0 1 0 11h-3v5H9Zm4-9h3a1.5 1.5 0 1 0 0-3h-3v3Z" fill="#fff"/>
+        </svg>
+        <span class="navbar__logo-text">Prodesk<span class="navbar__logo-accent">IT</span></span>
+      </a>
+
+      <button
+        class="navbar__toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <nav class="navbar__nav" id="primary-nav" aria-label="Primary">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="#services" class="navbar__link">Services</a></li>
+          <li class="navbar__item"><a href="#about" class="navbar__link">About</a></li>
+          <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main-content">
+
+    <!-- ---- HERO ---- -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">We Build the Digital Backbone of Modern Business</h1>
+          <p class="hero__subtitle">
+            From secure cloud migrations to data-driven marketing — Prodesk IT engineers the
+            infrastructure and strategy that keeps your company ahead of the curve.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Get Started</a>
+            <a href="#services" class="btn btn--secondary">Learn More</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <!-- SVG placeholder — replace with a WebP hero illustration in assets/images/ -->
+          <svg class="hero__image" viewBox="0 0 560 440" width="560" height="440" aria-hidden="true">
+            <rect width="560" height="440" rx="16" fill="var(--color-surface, #f1f5f9)"/>
+            <rect x="40" y="50" width="260" height="160" rx="8" fill="var(--color-primary, #2563eb)" opacity=".15"/>
+            <rect x="60" y="70" width="120" height="10" rx="4" fill="var(--color-primary, #2563eb)" opacity=".5"/>
+            <rect x="60" y="90" width="180" height="8" rx="4" fill="var(--color-primary, #2563eb)" opacity=".3"/>
+            <rect x="60" y="108" width="150" height="8" rx="4" fill="var(--color-primary, #2563eb)" opacity=".3"/>
+            <rect x="60" y="140" width="80" height="30" rx="6" fill="var(--color-primary, #2563eb)" opacity=".6"/>
+            <circle cx="420" cy="130" r="90" fill="var(--color-secondary, #0ea5e9)" opacity=".12"/>
+            <circle cx="420" cy="130" r="55" fill="var(--color-secondary, #0ea5e9)" opacity=".18"/>
+            <rect x="60" y="260" width="440" height="60" rx="8" fill="var(--color-primary, #2563eb)" opacity=".08"/>
+            <rect x="80" y="278" width="200" height="8" rx="4" fill="var(--color-primary, #2563eb)" opacity=".2"/>
+            <rect x="80" y="296" width="140" height="8" rx="4" fill="var(--color-primary, #2563eb)" opacity=".15"/>
+            <rect x="60" y="350" width="200" height="50" rx="8" fill="var(--color-secondary, #0ea5e9)" opacity=".1"/>
+            <rect x="280" y="350" width="220" height="50" rx="8" fill="var(--color-primary, #2563eb)" opacity=".1"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- SERVICES ---- -->
+    <section class="services" id="services">
+      <div class="services__inner">
+        <h2 class="services__title">Our Services</h2>
+        <p class="services__subtitle">End-to-end solutions engineered for reliability, security, and growth.</p>
+
+        <div class="services__grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                <rect width="48" height="48" rx="12" fill="var(--color-primary, #2563eb)" opacity=".1"/>
+                <path d="M15 30V18h4l5 7 5-7h4v12h-4v-7l-5 7-5-7v7h-4Z" fill="var(--color-primary, #2563eb)"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Web Development</h3>
+            <p class="card__desc">Responsive, high-performance websites and web applications built with modern frameworks and pixel-perfect attention to detail.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                <rect width="48" height="48" rx="12" fill="var(--color-primary, #2563eb)" opacity=".1"/>
+                <path d="M24 14c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10Zm0 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-4 10v-1c0-2 4-3 4-3s4 1 4 3v1h-8Z" fill="var(--color-primary, #2563eb)"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Cloud Solutions</h3>
+            <p class="card__desc">Scalable multi-cloud architectures on AWS, Azure, and GCP — designed for 99.99% uptime with automated failover and monitoring.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                <rect width="48" height="48" rx="12" fill="var(--color-primary, #2563eb)" opacity=".1"/>
+                <path d="M24 12l-10 8v14h7v-6h6v6h7V20l-10-8Z" fill="var(--color-primary, #2563eb)"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Cybersecurity</h3>
+            <p class="card__desc">Zero-trust frameworks, 24/7 SOC monitoring, and penetration testing to safeguard your data against evolving threat landscapes.</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                <rect width="48" height="48" rx="12" fill="var(--color-primary, #2563eb)" opacity=".1"/>
+                <path d="M16 16h16v4H16v-4Zm2 8h12v4H18v-4Zm4 8h4v4h-4v-4Z" fill="var(--color-primary, #2563eb)"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Digital Marketing</h3>
+            <p class="card__desc">Data-driven SEO, paid media, and content strategies that turn traffic into revenue and brand awareness into market share.</p>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                <rect width="48" height="48" rx="12" fill="var(--color-primary, #2563eb)" opacity=".1"/>
+                <circle cx="20" cy="22" r="6" fill="none" stroke="var(--color-primary, #2563eb)" stroke-width="2.5"/>
+                <circle cx="30" cy="26" r="6" fill="none" stroke="var(--color-primary, #2563eb)" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="card__title">DevOps &amp; Automation</h3>
+            <p class="card__desc">CI/CD pipelines, containerized deployments, and infrastructure-as-code so your team ships faster without sacrificing stability.</p>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+                <rect width="48" height="48" rx="12" fill="var(--color-primary, #2563eb)" opacity=".1"/>
+                <path d="M24 14l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6l2-6Z" fill="var(--color-primary, #2563eb)"/>
+              </svg>
+            </div>
+            <h3 class="card__title">IT Consulting</h3>
+            <p class="card__desc">Strategic technology roadmaps, vendor evaluations, and architecture reviews to align your IT spend with real business outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- CONTACT CTA ---- -->
+    <section class="cta" id="contact">
+      <div class="cta__inner">
+        <h2 class="cta__title">Ready to Modernize Your Stack?</h2>
+        <p class="cta__subtitle">Tell us where you are and where you want to go. We will map the shortest path.</p>
+        <a href="mailto:hello@prodesk.io" class="btn btn--primary btn--lg">Get in Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2024 Prodesk IT Solutions. All rights reserved.</p>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms of Service</a></li>
+          <li><a href="#" class="footer__link">Careers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
