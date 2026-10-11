@@ -7,4 +7,4 @@ Live Deployment URL:
 https://prodesksprint1-two.vercel.app/
 
 Technical QA Video Walkthrough URL:
-[PENDING_VIDEO_URL]
+https://youtu.be/-Xh-iu7fZr4

@@ -2,6 +2,12 @@
 
 Enterprise technology and digital infrastructure corporate landing page engineered with vanilla HTML5, CSS3, and JavaScript. Built from the ground up for zero-runtime overhead, strict accessibility (WCAG AA), zero cumulative layout shift (CLS), and Lighthouse 100/100 performance.
 
+## Project Deliverables
+
+- **Live Deployment**: [https://prodesksprint1-two.vercel.app/](https://prodesksprint1-two.vercel.app/)
+- **Technical QA Video Walkthrough**: [https://youtu.be/-Xh-iu7fZr4](https://youtu.be/-Xh-iu7fZr4)
+- **GitHub Repository**: [https://github.com/ashmit119/Prodesk_Sprint1](https://github.com/ashmit119/Prodesk_Sprint1)
+
 ## Project Structure
 
 ```text
@@ -17,6 +23,8 @@ Prodesk_project/
 ├── js/
 │   └── main.js
 ├── index.html
+├── links.txt
+├── prompts.md
 └── README.md
 ```
 
