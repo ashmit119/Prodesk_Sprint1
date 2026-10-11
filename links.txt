@@ -1,0 +1,10 @@
+# Prodesk IT — Sprint 1 Deliverable Links
+
+GitHub Repository URL:
+https://github.com/ashmit119/Prodesk_Sprint1
+
+Live Deployment URL:
+https://prodesksprint1-two.vercel.app/
+
+Technical QA Video Walkthrough URL:
+[PENDING_VIDEO_URL]
