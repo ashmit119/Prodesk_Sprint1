@@ -1,12 +1,12 @@
 /* =========================================
-   PHASE 2: Interaction, Polish & Typography
-   Tokens, Google Fonts, Transitions, Keyframes,
-   Strict Rem/Em Spacing & Accessible States
+   PRODESK IT — Corporate Stylesheet
+   Architecture: BEM Methodology
+   Tokens: CSS Custom Properties
    ========================================= */
 
-/* --- CSS Custom Properties (Tokens) --- */
+/* --- Design Tokens (:root) --- */
 :root {
-  /* Brand & Core Color Tokens */
+  /* Brand Palettes */
   --color-primary: #1d4ed8;
   --color-primary-hover: #1e40af;
   --color-primary-active: #172554;
@@ -14,7 +14,7 @@
   --color-secondary-hover: #0369a1;
   --color-secondary-active: #075985;
 
-  /* Surface, Background & Neutral Tokens */
+  /* Neutrals & Surfaces */
   --color-bg: #f8fafc;
   --color-surface: #ffffff;
   --color-surface-hover: #f1f5f9;
@@ -26,79 +26,83 @@
   --color-white: #ffffff;
   --color-focus-ring: #2563eb;
 
-  /* Typography (Google Fonts) */
+  /* Typography Scale */
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading: 'Poppins', system-ui, -apple-system, sans-serif;
 
-  /* Spacing Tokens (All in rem) */
+  /* Spatial Grid (Rem-only) */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 4rem;
 
-  /* Layout */
-  --container-width: 75rem; /* 1200px */
+  /* Layout Boundaries */
+  --container-width: 75rem;
 
   /* Elevation Shadows */
   --shadow-sm: 0 0.0625rem 0.125rem rgba(15, 23, 42, 0.05);
   --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(15, 23, 42, 0.08), 0 0.125rem 0.25rem -0.0625rem rgba(15, 23, 42, 0.04);
   --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(15, 23, 42, 0.08), 0 0.25rem 0.375rem -0.125rem rgba(15, 23, 42, 0.04);
 
-  /* Transitions */
+  /* Motion Curves */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 350ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- Dark Theme Tokens --- */
+/* --- Dark Theme Overrides --- */
+[data-theme="dark"] {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --color-primary-active: #1d4ed8;
+  --color-secondary: #38bdf8;
+  --color-secondary-hover: #7dd3fc;
+  --color-secondary-active: #0284c7;
+
+  --color-bg: #0b1120;
+  --color-surface: #151f32;
+  --color-surface-hover: #1e293b;
+  --color-surface-active: #334155;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-border: #223049;
+  --color-border-hover: #334155;
+  --color-white: #ffffff;
+  --color-focus-ring: #60a5fa;
+
+  --shadow-sm: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.5), 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.6), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.4);
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --color-primary: #3b82f6;
     --color-primary-hover: #60a5fa;
-    --color-primary-active: #93c5fd;
+    --color-primary-active: #1d4ed8;
     --color-secondary: #38bdf8;
     --color-secondary-hover: #7dd3fc;
-    --color-secondary-active: #bae6fd;
+    --color-secondary-active: #0284c7;
+
     --color-bg: #0b1120;
-    --color-surface: #1e293b;
-    --color-surface-hover: #334155;
-    --color-surface-active: #475569;
+    --color-surface: #151f32;
+    --color-surface-hover: #1e293b;
+    --color-surface-active: #334155;
     --color-text: #f8fafc;
     --color-text-muted: #94a3b8;
-    --color-border: #334155;
-    --color-border-hover: #475569;
+    --color-border: #223049;
+    --color-border-hover: #334155;
     --color-white: #ffffff;
     --color-focus-ring: #60a5fa;
-    --shadow-sm: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.4), 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.5), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.3);
+
+    --shadow-sm: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.5), 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.6), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.4);
   }
 }
 
-[data-theme="dark"] {
-  --color-primary: #3b82f6;
-  --color-primary-hover: #60a5fa;
-  --color-primary-active: #93c5fd;
-  --color-secondary: #38bdf8;
-  --color-secondary-hover: #7dd3fc;
-  --color-secondary-active: #bae6fd;
-  --color-bg: #0b1120;
-  --color-surface: #1e293b;
-  --color-surface-hover: #334155;
-  --color-surface-active: #475569;
-  --color-text: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-border: #334155;
-  --color-border-hover: #475569;
-  --color-white: #ffffff;
-  --color-focus-ring: #60a5fa;
-  --shadow-sm: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.4), 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.5), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.3);
-}
-
-/* --- Reset & Base --- */
+/* --- Core Resets --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -106,7 +110,7 @@
 }
 
 html {
-  font-size: 100%; /* 16px base */
+  font-size: 100%;
   scroll-behavior: smooth;
 }
 
@@ -117,12 +121,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   transition: background-color var(--transition-normal), color var(--transition-normal);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--color-text);
-  line-height: 1.25;
 }
 
 a {
@@ -139,13 +137,13 @@ img, svg {
   display: block;
 }
 
-/* --- Accessible Focus Management --- */
+/* --- Focus Indicator Standard --- */
 :focus-visible {
   outline: 0.125rem solid var(--color-focus-ring);
   outline-offset: 0.125rem;
 }
 
-/* --- Skip Navigation Link --- */
+/* --- Component: Skip Link --- */
 .skip-link {
   position: absolute;
   top: -3rem;
@@ -167,7 +165,7 @@ img, svg {
   outline-offset: 0.125rem;
 }
 
-/* --- Buttons & Interactive Elements --- */
+/* --- Component: Buttons --- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -237,7 +235,59 @@ img, svg {
   min-height: 3.25rem;
 }
 
-/* --- Header / Navbar --- */
+/* --- Component: Theme Toggle --- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+}
+
+.theme-toggle:active {
+  transform: scale(0.92);
+}
+
+.theme-toggle:focus-visible {
+  outline: 0.125rem solid var(--color-focus-ring);
+  outline-offset: 0.125rem;
+}
+
+.theme-toggle__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  pointer-events: none;
+}
+
+.theme-toggle__icon--sun {
+  display: none;
+}
+
+.theme-toggle__icon--moon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle__icon--sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+  display: none;
+}
+
+/* --- Component: Navbar --- */
 .navbar {
   background-color: var(--color-surface);
   border-bottom: 0.0625rem solid var(--color-border);
@@ -250,7 +300,7 @@ img, svg {
 .navbar__inner {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -266,6 +316,7 @@ img, svg {
   color: var(--color-text);
   border-radius: 0.375rem;
   padding: 0.25rem 0.5rem;
+  min-height: 2.75rem;
   transition: opacity var(--transition-fast);
 }
 
@@ -284,6 +335,12 @@ img, svg {
 
 .navbar__logo-accent {
   color: var(--color-primary);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navbar__toggle {
@@ -374,7 +431,7 @@ img, svg {
   outline-offset: 0.125rem;
 }
 
-@media (min-width: 48rem) { /* 768px */
+@media (min-width: 48rem) {
   .navbar__toggle {
     display: none;
   }
@@ -394,7 +451,7 @@ img, svg {
   }
 }
 
-/* --- Hero Section --- */
+/* --- Component: Hero --- */
 .hero {
   padding: var(--space-xl) 1rem;
   background-color: var(--color-surface);
@@ -415,8 +472,7 @@ img, svg {
   justify-content: center;
 }
 
-/* @keyframes Fade-in-up Animation */
-@keyframes fadeInUp {
+@keyframes heroFadeInUp {
   from {
     opacity: 0;
     transform: translateY(1.25rem);
@@ -432,7 +488,8 @@ img, svg {
   line-height: 1.2;
   font-family: var(--font-heading);
   font-weight: 700;
-  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  color: var(--color-text);
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero__subtitle {
@@ -455,6 +512,11 @@ img, svg {
 }
 
 .hero__image {
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  aspect-ratio: 560 / 440;
+  object-fit: cover;
   border-radius: 1rem;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-slow);
@@ -464,7 +526,7 @@ img, svg {
   transform: scale(1.01);
 }
 
-@media (min-width: 64rem) { /* 1024px */
+@media (min-width: 64rem) {
   .hero__inner {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -475,7 +537,7 @@ img, svg {
   }
 }
 
-/* --- Services Section --- */
+/* --- Component: Services --- */
 .services {
   padding: var(--space-xl) 1rem;
   background-color: var(--color-bg);
@@ -492,6 +554,7 @@ img, svg {
   text-align: center;
   margin-bottom: 0.5rem;
   font-family: var(--font-heading);
+  color: var(--color-text);
 }
 
 .services__subtitle {
@@ -507,6 +570,7 @@ img, svg {
   gap: var(--space-md);
 }
 
+/* --- Component: Card --- */
 .card {
   background-color: var(--color-surface);
   border: 0.0625rem solid var(--color-border);
@@ -544,7 +608,73 @@ img, svg {
   line-height: 1.5;
 }
 
-/* --- Call to Action (CTA) --- */
+/* --- Component: About & Metrics --- */
+.about {
+  padding: var(--space-xl) 1rem;
+  background-color: var(--color-surface);
+  border-top: 0.0625rem solid var(--color-border);
+  border-bottom: 0.0625rem solid var(--color-border);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+.about__inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.about__header {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto var(--space-lg) auto;
+}
+
+.about__title {
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.about__subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--space-md);
+}
+
+.about__stat {
+  padding: var(--space-md);
+  text-align: center;
+  background-color: var(--color-bg);
+  border-radius: 0.5rem;
+  border: 0.0625rem solid var(--color-border);
+  transition: transform var(--transition-normal);
+}
+
+.about__stat:hover {
+  transform: translateY(-0.125rem);
+}
+
+.about__stat-value {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.about__stat-label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* --- Component: CTA --- */
 .cta {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -593,7 +723,7 @@ img, svg {
   outline-offset: 0.125rem;
 }
 
-/* --- Footer --- */
+/* --- Component: Footer --- */
 .footer {
   background-color: var(--color-surface);
   padding: var(--space-lg) 1rem;
@@ -657,7 +787,7 @@ img, svg {
   }
 }
 
-/* --- Reduced Motion Accessibility Override --- */
+/* --- Accessibility: Motion Reduction --- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

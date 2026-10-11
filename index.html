@@ -3,28 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prodesk IT — Enterprise Technology &amp; Digital Marketing Solutions</title>
-  <meta name="description" content="Prodesk IT delivers enterprise-grade cloud infrastructure, cybersecurity, DevOps automation, and digital marketing solutions for modern businesses.">
-  
-  <!-- Favicon Data URI -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231d4ed8'/><path d='M9 24V8h7a5.5 5.5 0 0 1 0 11h-3v5H9Zm4-9h3a1.5 1.5 0 1 0 0-3h-3v3Z' fill='%23fff'/></svg>">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Google Fonts Preconnect & Stylesheet -->
+  <title>Prodesk IT — Enterprise Cloud, DevOps &amp; Cybersecurity Solutions</title>
+  <meta name="description" content="Prodesk IT delivers resilient enterprise cloud architectures, 24/7 SOC cybersecurity, CI/CD automation, and high-impact digital marketing strategies.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ashmit119.github.io/Prodesk_Sprint1/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Prodesk IT Solutions">
+  <meta property="og:title" content="Prodesk IT — Enterprise Cloud, DevOps &amp; Cybersecurity">
+  <meta property="og:description" content="Architecting resilient digital infrastructure, automated CI/CD pipelines, and secure cloud ecosystems.">
+  <meta property="og:url" content="https://ashmit119.github.io/Prodesk_Sprint1/">
+  <meta property="og:image" content="https://ashmit119.github.io/Prodesk_Sprint1/assets/images/hero-workspace.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prodesk IT — Enterprise Cloud, DevOps &amp; Cybersecurity">
+  <meta name="twitter:description" content="Architecting resilient digital infrastructure, automated CI/CD pipelines, and secure cloud ecosystems.">
+  <meta name="twitter:image" content="https://ashmit119.github.io/Prodesk_Sprint1/assets/images/hero-workspace.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d4ed8'/%3E%3Cpath d='M9 24V8h7a5.5 5.5 0 0 1 0 11h-3v5H9Zm4-9h3a1.5 1.5 0 1 0 0-3h-3v3Z' fill='%23ffffff'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Immediate Theme Initializer to prevent layout flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('prodesk-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (err) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- skip nav -->
+  <!-- Skip Navigation -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ====== HEADER / NAVBAR ====== -->
+  <!-- Header / Navigation -->
   <header class="navbar">
     <div class="navbar__inner">
-      <a href="/" class="navbar__logo">
+      <a href="./" class="navbar__logo" aria-label="Prodesk IT Home">
         <svg class="navbar__logo-icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
           <rect width="32" height="32" rx="6" fill="var(--color-primary)"/>
           <path d="M9 24V8h7a5.5 5.5 0 0 1 0 11h-3v5H9Zm4-9h3a1.5 1.5 0 1 0 0-3h-3v3Z" fill="var(--color-white)"/>
@@ -32,19 +64,45 @@
         <span class="navbar__logo-text">Prodesk<span class="navbar__logo-accent">IT</span></span>
       </a>
 
-      <button
-        class="navbar__toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="primary-nav"
-      >
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
+      <div class="navbar__actions">
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Toggle visual theme"
+          aria-pressed="false"
+        >
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
 
-      <nav class="navbar__nav" id="primary-nav" aria-label="Primary">
+        <button
+          class="navbar__toggle"
+          id="navbar-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+        </button>
+      </div>
+
+      <nav class="navbar__nav" id="primary-nav" aria-label="Primary navigation">
         <ul class="navbar__list">
           <li class="navbar__item"><a href="#services" class="navbar__link">Services</a></li>
           <li class="navbar__item"><a href="#about" class="navbar__link">About</a></li>
@@ -54,10 +112,10 @@
     </div>
   </header>
 
-  <!-- ====== MAIN ====== -->
+  <!-- Main Content -->
   <main id="main-content">
 
-    <!-- ---- HERO ---- -->
+    <!-- Hero Section -->
     <section class="hero">
       <div class="hero__inner">
         <div class="hero__content">
@@ -72,33 +130,27 @@
           </div>
         </div>
         <div class="hero__visual">
-          <svg class="hero__image" viewBox="0 0 560 440" width="560" height="440" aria-hidden="true">
-            <rect width="560" height="440" rx="16" fill="var(--color-surface)"/>
-            <rect x="40" y="50" width="260" height="160" rx="8" fill="var(--color-primary)" opacity=".15"/>
-            <rect x="60" y="70" width="120" height="10" rx="4" fill="var(--color-primary)" opacity=".5"/>
-            <rect x="60" y="90" width="180" height="8" rx="4" fill="var(--color-primary)" opacity=".3"/>
-            <rect x="60" y="108" width="150" height="8" rx="4" fill="var(--color-primary)" opacity=".3"/>
-            <rect x="60" y="140" width="80" height="30" rx="6" fill="var(--color-primary)" opacity=".6"/>
-            <circle cx="420" cy="130" r="90" fill="var(--color-secondary)" opacity=".12"/>
-            <circle cx="420" cy="130" r="55" fill="var(--color-secondary)" opacity=".18"/>
-            <rect x="60" y="260" width="440" height="60" rx="8" fill="var(--color-primary)" opacity=".08"/>
-            <rect x="80" y="278" width="200" height="8" rx="4" fill="var(--color-primary)" opacity=".2"/>
-            <rect x="80" y="296" width="140" height="8" rx="4" fill="var(--color-primary)" opacity=".15"/>
-            <rect x="60" y="350" width="200" height="50" rx="8" fill="var(--color-secondary)" opacity=".1"/>
-            <rect x="280" y="350" width="220" height="50" rx="8" fill="var(--color-primary)" opacity=".1"/>
-          </svg>
+          <img
+            class="hero__image"
+            src="assets/images/hero-workspace.webp"
+            alt="Prodesk IT corporate cloud workspace and modern operations center"
+            width="560"
+            height="440"
+            fetchpriority="high"
+            decoding="async"
+          >
         </div>
       </div>
     </section>
 
-    <!-- ---- SERVICES ---- -->
+    <!-- Services Section -->
     <section class="services" id="services">
       <div class="services__inner">
         <h2 class="services__title">Our Services</h2>
         <p class="services__subtitle">End-to-end solutions engineered for reliability, security, and growth.</p>
 
         <div class="services__grid">
-          <!-- Card 1 -->
+          <!-- Service Card 1 -->
           <article class="card">
             <div class="card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
@@ -110,7 +162,7 @@
             <p class="card__desc">Responsive, high-performance websites and web applications built with modern frameworks and pixel-perfect attention to detail.</p>
           </article>
 
-          <!-- Card 2 -->
+          <!-- Service Card 2 -->
           <article class="card">
             <div class="card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
@@ -122,7 +174,7 @@
             <p class="card__desc">Scalable multi-cloud architectures on AWS, Azure, and GCP — designed for 99.99% uptime with automated failover and monitoring.</p>
           </article>
 
-          <!-- Card 3 -->
+          <!-- Service Card 3 -->
           <article class="card">
             <div class="card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
@@ -134,7 +186,7 @@
             <p class="card__desc">Zero-trust frameworks, 24/7 SOC monitoring, and penetration testing to safeguard your data against evolving threat landscapes.</p>
           </article>
 
-          <!-- Card 4 -->
+          <!-- Service Card 4 -->
           <article class="card">
             <div class="card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
@@ -146,7 +198,7 @@
             <p class="card__desc">Data-driven SEO, paid media, and content strategies that turn traffic into revenue and brand awareness into market share.</p>
           </article>
 
-          <!-- Card 5 -->
+          <!-- Service Card 5 -->
           <article class="card">
             <div class="card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
@@ -159,7 +211,7 @@
             <p class="card__desc">CI/CD pipelines, containerized deployments, and infrastructure-as-code so your team ships faster without sacrificing stability.</p>
           </article>
 
-          <!-- Card 6 -->
+          <!-- Service Card 6 -->
           <article class="card">
             <div class="card__icon">
               <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
@@ -174,26 +226,57 @@
       </div>
     </section>
 
-    <!-- ---- CONTACT CTA ---- -->
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about__inner">
+        <div class="about__header">
+          <h2 class="about__title">Engineering Excellence at Scale</h2>
+          <p class="about__subtitle">Decades of combined engineering experience powering high-availability systems for leading modern enterprises.</p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__stat">
+            <span class="about__stat-value">99.99%</span>
+            <span class="about__stat-label">Infrastructure Uptime SLA</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-value">250+</span>
+            <span class="about__stat-label">Enterprise Deployments</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-value">24/7/365</span>
+            <span class="about__stat-label">Global SOC Monitoring</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-value">&lt; 15m</span>
+            <span class="about__stat-label">Critical Incident Response</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
     <section class="cta" id="contact">
       <div class="cta__inner">
         <h2 class="cta__title">Ready to Modernize Your Stack?</h2>
         <p class="cta__subtitle">Tell us where you are and where you want to go. We will map the shortest path.</p>
-        <a href="mailto:hello@prodesk.io" class="btn btn--primary btn--lg">Get in Touch</a>
+        <div class="cta__actions">
+          <a href="mailto:hello@prodesk.io" class="btn btn--primary btn--lg">Get in Touch</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ====== FOOTER ====== -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer__inner">
-      <p class="footer__copy">&copy; 2024 Prodesk IT Solutions. All rights reserved.</p>
-      <nav class="footer__nav" aria-label="Footer">
+      <p class="footer__copy">&copy; 2026 Prodesk IT Solutions. All rights reserved.</p>
+      <nav class="footer__nav" aria-label="Footer navigation">
         <ul class="footer__list">
-          <li><a href="#" class="footer__link">Privacy Policy</a></li>
-          <li><a href="#" class="footer__link">Terms of Service</a></li>
-          <li><a href="#" class="footer__link">Careers</a></li>
+          <li class="footer__item"><a href="#services" class="footer__link">Privacy Policy</a></li>
+          <li class="footer__item"><a href="#services" class="footer__link">Terms of Service</a></li>
+          <li class="footer__item"><a href="#contact" class="footer__link">Careers</a></li>
         </ul>
       </nav>
     </div>
